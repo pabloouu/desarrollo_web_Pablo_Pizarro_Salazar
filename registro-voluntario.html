@@ -50,7 +50,7 @@
                     <div>
                         <label for="rut">RUT *</label>
                         <input type="text" id="rut" name="rut" required>
-                        <small class="ayuda">Con dígito verificador. Ejempo:12.345.678-9</small>
+                        <small class="ayuda">Con dígito verificador. Ejemplo:12.345.678-9</small>
                         <span class="error" id="error-rut"></span>
                     </div>
                     <div>
@@ -84,7 +84,7 @@
                     </div>
                     <div>
                         <label for="correo-rep">Correo electrónico (repetición) *</label>
-                        <input type="text" id="correo-rep" name="correo-rep" required>
+                        <input type="email" id="correo-rep" name="correo-rep" required>
                         <small class="ayuda">Debe coincidir exactamente con el anterior.</small>
                         <span class="error" id="error-correo-rep"></span>
                     </div>
@@ -136,11 +136,13 @@
                         <select id="comuna" name="comuna" required disabled>
                             <option value="">Primero seleccione una región</option>
                         </select>
+                        <small class="ayuda">Sólo se ofrecen las comunas de la región elegida</small>
                         <span class="error" id="error-comuna"></span>
                     </div>
                     <div>
                         <label for="direccion">Calle y número *</label>
                         <input type="text" id="direccion" name="direccion" required>
+                        <small class="ayuda">Entre 5 y 120 caracteres. Ejemplo: Av. Libertador 1234</small>
                         <span class="error" id="error-direccion"></span>
                     </div>
                     <div>
@@ -168,24 +170,24 @@
                     </fieldset>
 
                     <fieldset>
-                        <legend>Intereses*</legend>
+                        <legend>Intereses *</legend>
                         <label for="interes-rapaces">
-                            <input type="checkbox" id="interes-rapaces" name="interes-rapaces">Rapaces
+                            <input type="checkbox" id="interes-rapaces" name="interes-rapaces" required>Rapaces
                         </label>
                         <label for="interes-acuaticas">
-                            <input type="checkbox" id="interes-acuaticas" name="interes-acuaticas">Acuáticas
+                            <input type="checkbox" id="interes-acuaticas" name="interes-acuaticas" required>Acuáticas
                         </label>
                         <label for="interes-marinas">
-                            <input type="checkbox" id="interes-marinas" name="interes-marinas">Marinas
+                            <input type="checkbox" id="interes-marinas" name="interes-marinas" required>Marinas
                         </label>
                         <label for="interes-terrestres">
-                            <input type="checkbox" id="interes-terrestres" name="interes-terrestres">Terrestres
+                            <input type="checkbox" id="interes-terrestres" name="interes-terrestres" required>Terrestres
                         </label>
                         <label for="interes-paseriformes">
-                            <input type="checkbox" id="interes-paseriformes" name="interes-paseriformes">Paseriformes
+                            <input type="checkbox" id="interes-paseriformes" name="interes-paseriformes" required>Paseriformes
                         </label>
                         <label for="interes-picaflores">
-                            <input type="checkbox" id="interes-picaflores" name="interes-picaflores">Picaflores
+                            <input type="checkbox" id="interes-picaflores" name="interes-picaflores" required>Picaflores
                         </label>
                         <span class="error" id="error-interes"></span>
                     </fieldset>
@@ -206,6 +208,7 @@
                         <label for="obs">Observaciones (opcional)</label>
                         <textarea id="obs" name="obs" rows="4" cols="40" maxlength="500"
                             placeholder="Indica información adicional que quieras compartir..."></textarea>
+                            <small class="ayuda" id="contador-obs"></small>
                     </div>
 
                     <div>

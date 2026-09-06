@@ -38,6 +38,7 @@
                     <div>
                         <label for="correo-voluntario">Correo de la persona voluntaria *</label>
                         <input type="email" id="correo-voluntario" name="correo_voluntario" required>
+                        <small class="ayuda">Debe coincidir con el correo inscrito.</small>
                         <span class="error" id="error-correo-voluntario"></span>
                     </div>
                 </fieldset>
@@ -63,11 +64,13 @@
                     <div>
                         <label for="nombre-ave">Nombre del ave *</label>
                         <input type="text" id="nombre-ave" name="nombre_ave" maxlength="60" required>
+                        <small class="ayuda">Nombre comúm, entre 3 y 60 caracteres.</small>
                         <span class="error" id="error-nombre-ave"></span>
                     </div>
                     <div>
                         <label for="cantidad">Cantidad de ejemplares *</label>
                         <input type="number" id="cantidad" name="cantidad" min="1" max="5000" required>
+                        <small class="ayuda">Número entre 1 y 5000.</small>
                         <span class="error" id="error-cantidad"></span>
                     </div>
                     <div>
@@ -121,6 +124,7 @@
                     <div>
                         <label for="lugar">Lugar específico *</label>
                         <input type="text" id="lugar" name="lugar" maxlength="120" required>
+                        <small class="ayuda">Entre 5 y 120 caracteres. Ejemplo: Humedal del río Aconcagua, sector norte.</small>
                         <span class="error" id="error-lugar"></span>
                     </div>
                 </fieldset>
@@ -133,11 +137,13 @@
                     <div>
                         <label for="fecha">Fecha del avistamiento *</label>
                         <input type="date" id="fecha" name="fecha" required>
+                        <small class="ayuda">No puede estar en el futuro ni tener más de 5 años de antiguedad.</small>
                         <span class="error" id="error-fecha"></span>
                     </div>
                     <div>
                         <label for="hora">Hora del avistamiento *</label>
                         <input type="time" id="hora" name="hora" required>
+                        <small class="ayuda">Formato de 24 horas. Si el avistamiento es hoy, la hora no puede ser posterior a la actual.</small>
                         <span class="error" id="error-hora"></span>
                     </div>
                 </fieldset>
@@ -151,12 +157,14 @@
                         <label for="evidencia">Fotos o videos *</label>
                         <input type="file" id="evidencia" name="evidencia" multiple
                             accept="image/jpeg,image/png,image/webp,video/mp4,video/webm" required>
+                        <small class="ayuda">Obligatorio al menos un archivo. Se aceptan hasta 5 archivos de tipo JPG, PNG, WEBP, MP4, WEBM, con un máximo de 25 MB cada uno.</small>
                         <span class="error" id="error-evidencia"></span>
                     </div>
                     <div>
                         <label for="obs">Observaciones (opcional)</label>
                         <textarea id="obs" name="obs" rows="4" cols="40" maxlength="500"
                             placeholder="Describa el entorno, el clima u otro detalle relevante..."></textarea>
+                        <small class="ayuda" id="contador-obs"></small>
                     </div>
                 </fieldset>
             </section>

@@ -37,7 +37,8 @@
                         <label for="tipo-ave">Tipo de ave</label>
                         <select id="tipo-ave" name="tipo-ave">
                             <option value="todos">Todos los tipos</option>
-                            <option value="rapaces">Rapaces</option <option value="acuaticas">Acuáticas</option>
+                            <option value="rapaces">Rapaces</option>
+                            <option value="acuaticas">Acuáticas</option>
                             <option value="marinas">Marinas</option>
                             <option value="terrestres">Terrestres</option>
                             <option value="paseriformes">Paseriformes</option>
@@ -102,21 +103,19 @@
                         <span class="error" id="error-ordenar-por"></span>
                     </div>
                     <div>
-                        <div>
-                            <label for="resultados-por-pagina">Resultados por página</label>
-                            <select id="resultados-por-pagina" name="resultados-por-pagina">
-                                <option value="5">5</option>
-                                <option value="10">10</option>
-                                <option value="20">20</option>
-                            </select>
-                            <span class="error" id="error-resultados-por-pagina"></span>
-                        </div>
-
+                        <label for="resultados-por-pagina">Resultados por página</label>
+                        <select id="resultados-por-pagina" name="resultados-por-pagina">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                        </select>
+                        <span class="error" id="error-resultados-por-pagina"></span>
+                    </div>
                 </fieldset>
 
             </section>
-            <button type="submit">Enviar avistamiento</button>
-            <button type="reset">Limpiar formulario</button>
+            <button type="button" id="btn-filtrar">Aplicar filtros</button>
+            <button type="reset">Quitar filtros</button>
 
         </form>
 
@@ -142,14 +141,19 @@
                 </tbody>
             </table>
 
+            <nav id="paginador" aria-label="Paginación de resultados"></nav>
+
         </section>
     </main>
 
     <footer>
-        <p>&#169; 2026 Av(e)stamientos. Todos los derechos reservados.</p>
-        <a href="#">Términos y condiciones</a>
-        <a href="#">Política de privacidad</a>
+        <p><b>Av(e)stamientos de Chile</b> - Todos los derechos reservados Pablo Pizarro Salazar</p>
+        <p>CC5002 Desarrollo de Aplicaciones Web - Facultad de Ciencias Físicas y Matemáticas, Universidad de Chile</p>
+        <p>Contacto (ficticio): pablotologo@ornitologos.cl</p>
     </footer>
+
+    <script src="js/datos.js"></script>
+    <script src="js/listado.js"></script>
 
 </body>
 
