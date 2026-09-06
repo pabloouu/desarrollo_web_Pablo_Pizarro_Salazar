@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción de voluntarios | Av(e)stamientos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    
+    <header>
+        <h1>Av(e)stamientos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro-voluntario.html">Ser voluntario</a></li>
+                <li><a href="nuevo-avistamiento.html">Informar avistamiento</a></li>
+                <li><a href="avistamientos.html">Avistamientos</a></li>
+                <li><a href="estadisticas.html">Indicadores</a></li>
+            </ul>
+        </nav>
+    </header> 
+    
+    <main>
+        <form id="form-registro" novalidate>
+            <h2>Inscripción de voluntarios y voluntarias</h2>
+            <p>Complete el formulario para ser parte de la comunidad de Av(e)stamientos. Los campos
+                marcados con * son <strong>obligatorios</strong> para poder inscribirse. ¡Únete a esta
+                gran comunidad y estate al tanto de los avistamientos, salidas a terreno y más!
+            </p>
+            
+            <section>
+                <h3>Datos personales</h3>
+                <fieldset>
+                    <legend>Identificación</legend>
+                    <div>
+                        <label for="nombres">Nombres *</label> 
+                        <input type="text" id="nombres" name="nombres" required>
+                        <span class="error" id="error-nombres"></span>
+                    </div>
+                    <div>
+                        <label for="apellidos">Apellidos *</label>
+                        <input type="text" id="apellidos" name="apellidos" required>
+                        <span class="error" id="error-apellidos"></span>
+                    </div>
+                    <div>
+                        <label for="rut">RUT *</label>
+                        <input type="text" id="rut" name="rut" required>
+                        <span class="error" id="error-rut"></span>
+                    </div>
+                    <div>
+                        <label for="fecha-nacimiento">Fecha de nacimiento *</label>
+                        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                        <span class="error" id="error-fecha-nacimiento"></span>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Género (opcional)</legend>
+                    <input type="radio" id="genero-M" name="genero" value="masculino">
+                    <label for="genero-M">Masculino</label>
+                    <input type="radio" id="genero-F" name="genero" value="femenino">
+                    <label for="genero-F">Femenino</label>
+                    <input type="radio" id="genero-O" name="genero" value="otro">
+                    <label for="genero-O">Otro</label>
+                    <span class="error" id="error-genero"></span>
+                </fieldset>
+            </section>
+
+            <section>
+                <h3>Datos de contacto</h3>
+                <fieldset>
+                    <legend>Contacto</legend>
+                    <div>
+                        <label for="correo">Correo electrónico *</label> 
+                        <input type="email" id="correo" name="correo" required>
+                        <span class="error" id="error-correo"></span>
+                    </div>
+                    <div>
+                        <label for="correo-rep">Correo electrónico (repetición) *</label>
+                        <input type="text" id="correo-rep" name="correo-rep" required>
+                        <span class="error" id="error-correo-rep"></span>
+                    </div>
+                    <div>
+                        <label for="telefono">Teléfono celular *</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                        <span class="error" id="error-telefono"></span>
+                    </div>
+                    <div>
+                        <label for="telefono-fijo">Teléfono fijo (opcional)</label>
+                        <input type="tel" id="telefono-fijo" name="telefono-fijo">
+                        <span class="error" id="error-telefono-fijo"></span>
+                    </div>
+                </fieldset>
+            </section>
+
+            <section>
+                <h3>Dirección</h3>
+                <fieldset>
+                    <legend>Dirección</legend>
+                    <div>
+                        <label for="region">Región *</label>
+                        <select id="region" name="region" required>
+                            <option value="">-- Seleccione una región --</option>
+                            <option value="Arica y Parinacota">Arica y Parinacota</option>
+                            <option value="Tarapacá">Tarapacá</option>
+                            <option value="Antofagasta">Antofagasta</option>
+                            <option value="Atacama">Atacama</option>
+                            <option value="Coquimbo">Coquimbo</option>
+                            <option value="Valparaíso">Valparaíso</option>
+                            <option value="Metropolitana de Santiago">Metropolitana de Santiago</option>
+                            <option value="Libertador General Bernardo O'Higgins">O'Higgins</option>
+                            <option value="Maule">Maule</option>
+                            <option value="Ñuble">Ñuble</option>
+                            <option value="Biobío">Biobío</option>
+                            <option value="La Araucanía">La Araucanía</option>
+                            <option value="Los Ríos">Los Ríos</option>
+                            <option value="Los Lagos">Los Lagos</option>
+                            <option value="Aysén del General Carlos Ibáñez del Campo">Aysén</option>
+                            <option value="Magallanes y de la Antártica Chilena">Magallanes</option>
+                        </select>
+                        <span class="error" id="error-region"></span>
+                    </div>
+                    <div>
+                        <label for="comuna">Comuna *</label>
+                        <select id="comuna" name="comuna" required disabled>
+                            <option value="">Primero seleccione una región</option>
+                        </select>
+                        <span class="error" id="error-comuna"></span>
+                    </div>
+                    <div>
+                        <label for="direccion">Calle y número *</label>
+                        <input type="text" id="direccion" name="direccion" required>
+                        <span class="error" id="error-direccion"></span>
+                    </div>
+                    <div>
+                        <label for="departamento">Departamento, block o villa (opcional)</label>
+                        <input type="text" id="departamento" name="departamento">
+                        <span class="error" id="error-departamento"></span>
+                    </div>
+                </fieldset>
+            </section>
+
+            <section>
+                <h3>Sobre ti</h3>
+                <fieldset>
+                    <legend>Perfil de observación</legend>
+
+                    <fieldset>
+                        <legend>Nivel de experiencia *</legend>
+                        <input type="radio" id="experiencia-P" name="experiencia" value="principiante" required>
+                        <label for="experiencia-P">Principiante: recién parto en la observación de aves</label>
+                        <input type="radio" id="experiencia-I" name="experiencia" value="intermedio" required>
+                        <label for="experiencia-I">Intermedio: reconozco las especies más comunes</label>
+                        <input type="radio" id="experiencia-A" name="experiencia" value="avanzado" required>
+                        <label for="experiencia-A">Avanzado: identifico especies poco frecuentes</label>
+                        <span class="error" id="error-experiencia"></span>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Intereses*</legend>
+                        <label for="interes-rapaces">
+                            <input type="checkbox" id="interes-rapaces" name="interes-rapaces">Rapaces
+                        </label>
+                        <label for="interes-acuaticas">
+                            <input type="checkbox" id="interes-acuaticas" name="interes-acuaticas">Acuáticas
+                        </label>
+                        <label for="interes-marinas">
+                            <input type="checkbox" id="interes-marinas" name="interes-marinas">Marinas
+                        </label>
+                        <label for="interes-terrestres">
+                            <input type="checkbox" id="interes-terrestres" name="interes-terrestres">Terrestres
+                        </label>
+                        <label for="interes-paseriformes">
+                            <input type="checkbox" id="interes-paseriformes" name="interes-paseriformes">Paseriformes
+                        </label>
+                        <label for="interes-picaflores">
+                            <input type="checkbox" id="interes-picaflores" name="interes-picaflores">Picaflores
+                        </label>
+                        <span class="error" id="error-interes"></span>
+                    </fieldset>
+
+                    <div>
+                        <label for="disponibilidad">Disponibilidad habitual (opcional)</label>
+                        <select id="disponibilidad" name="disponibilidad">
+                            <option value="sin-preferencia">Sin preferencia</option>
+                            <option value="dia-semana-manana">Día de semana por la mañana</option>
+                            <option value="dia-semana-tarde">Día de semana por la tarde</option>
+                            <option value="fin-semana">Fin de semana</option>
+                            <option value="salidas-programadas">Salidas programadas</option>
+                        </select>
+                        <span class="error" id="error-disponibilidad"></span>
+                    </div>
+
+                    <div>
+                        <label for="obs">Observaciones (opcional)</label>
+                        <textarea id="obs" name="obs" rows="4" cols="40" maxlength="500"
+                        placeholder="Indica información adicional que quieras compartir..."></textarea>
+                    </div>
+
+                    <div>
+                        <label for="consentimiento">
+                        <input type="checkbox" id="consentimiento" name="consentimiento" required> 
+                        Declaro que los datos entregados son válidos y autorizo su uso para fines de investigación ornitológica e intereses del usuario *.    
+                        </label>
+                        <span class="error" id="error-consentimiento"></span>
+                    </div>
+                </fieldset>
+            </section>
+            
+            <button type="submit">Registrarme</button>
+            <button type="reset">Limpiar formulario</button>
+        </form>
+    </main>
+        
+    <footer>
+        <p><b>Av(e)stamientos de Chile</b> - Todos los derechos reservados Pablo Pizarro Salazar</p>
+        <p>CC5002 Desarrollo de Aplicaciones Web - Facultad de Ciencias Físicas y Matemáticas, Universidad de Chile</p>
+        <p>Contacto (ficticio): pablotologo@ornitologos.cl</p>
+    </footer>
+
+    <script src="js/regiones.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/registro.js"></script>
+
+</body>
+
+</html>

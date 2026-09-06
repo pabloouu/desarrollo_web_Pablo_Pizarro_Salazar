@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informar avistamiento | Av(e)stamientos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Av(e)stamientos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro-voluntario.html">Ser voluntario</a></li>
+                <li><a href="nuevo-avistamiento.html">Informar avistamiento</a></li>
+                <li><a href="avistamientos.html">Avistamientos</a></li>
+                <li><a href="estadisticas.html">Indicadores</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form id="form-registrar-avistamiento" novalidate>
+            <h2>Informar un avistamiento</h2>
+            <p>Sólo las personas <strong>ya inscritas</strong> pueden informar avistamientos. Los campos marcados
+                con * son <strong>obligatorios</strong>, incluido el respaldo en foto o video.
+                ¿Aún no se inscribe? <a href="registro-voluntario.html">Regístrese aquí</a>.
+            </p>
+
+            <section>
+                <h3>Quién informa</h3>
+                <fieldset>
+                    <legend>Correo electrónico de la persona voluntaria</legend>
+                    <div>
+                        <label for="correo-voluntario">Correo de la persona voluntaria *</label>
+                        <input type="email" id="correo-voluntario" name="correo_voluntario" required>
+                        <span class="error" id="error-correo-voluntario"></span>
+                    </div>
+                </fieldset>
+            </section>
+
+            <section>
+                <h3>El ave observada</h3>
+                <fieldset>
+                    <legend>Datos del ave</legend>
+                    <div>
+                        <label for="tipo-ave">Tipo de ave *</label>
+                        <select id="tipo-ave" name="tipo_ave" required>
+                            <option value="">-- Seleccione un tipo --</option>
+                            <option value="rapaces">Rapaces</option>
+                            <option value="acuaticas">Acuáticas</option>
+                            <option value="marinas">Marinas</option>
+                            <option value="terrestres">Terrestres</option>
+                            <option value="paseriformes">Paseriformes</option>
+                            <option value="picaflores">Picaflores</option>
+                        </select>
+                        <span class="error" id="error-tipo-ave"></span>
+                    </div>
+                    <div>
+                        <label for="nombre-ave">Nombre del ave *</label>
+                        <input type="text" id="nombre-ave" name="nombre_ave" maxlength="60" required>
+                        <span class="error" id="error-nombre-ave"></span>
+                    </div>
+                    <div>
+                        <label for="cantidad">Cantidad de ejemplares *</label>
+                        <input type="number" id="cantidad" name="cantidad" min="1" max="5000" required>
+                        <span class="error" id="error-cantidad"></span>
+                    </div>
+                    <div>
+                        <label for="conducta">Conducta observada (opcional)</label>
+                        <select id="conducta" name="conducta">
+                            <option value="">No informada</option>
+                            <option value="alimentacion">Alimentación</option>
+                            <option value="vuelo">En vuelo</option>
+                            <option value="descanso">Descanso</option>
+                            <option value="nidificacion">Nidificación</option>
+                            <option value="canto">Canto o vocalización</option>
+                        </select>
+                    </div>
+                </fieldset>
+            </section>
+
+            <section>
+                <h3>Lugar del avistamiento</h3>
+                <fieldset>
+                    <legend>Ubicación</legend>
+                    <div>
+                        <label for="region">Región *</label>
+                        <select id="region" name="region" required>
+                            <option value="">-- Seleccione una región --</option>
+                            <option value="Arica y Parinacota">Arica y Parinacota</option>
+                            <option value="Tarapacá">Tarapacá</option>
+                            <option value="Antofagasta">Antofagasta</option>
+                            <option value="Atacama">Atacama</option>
+                            <option value="Coquimbo">Coquimbo</option>
+                            <option value="Valparaíso">Valparaíso</option>
+                            <option value="Metropolitana de Santiago">Metropolitana de Santiago</option>
+                            <option value="Libertador General Bernardo O'Higgins">O'Higgins</option>
+                            <option value="Maule">Maule</option>
+                            <option value="Ñuble">Ñuble</option>
+                            <option value="Biobío">Biobío</option>
+                            <option value="La Araucanía">La Araucanía</option>
+                            <option value="Los Ríos">Los Ríos</option>
+                            <option value="Los Lagos">Los Lagos</option>
+                            <option value="Aysén del General Carlos Ibáñez del Campo">Aysén</option>
+                            <option value="Magallanes y de la Antártica Chilena">Magallanes</option>
+                        </select>
+                        <span class="error" id="error-region"></span>
+                    </div>
+                    <div>
+                        <label for="comuna">Comuna *</label>
+                        <select id="comuna" name="comuna" required disabled>
+                            <option value="">Primero seleccione una región</option>
+                        </select>
+                        <span class="error" id="error-comuna"></span>
+                    </div>
+                    <div>
+                        <label for="lugar">Lugar específico *</label>
+                        <input type="text" id="lugar" name="lugar" maxlength="120" required>
+                        <span class="error" id="error-lugar"></span>
+                    </div>
+                </fieldset>
+            </section>
+
+            <section>
+                <h3>Fecha y hora</h3>
+                <fieldset>
+                    <legend>Momento del avistamiento</legend>
+                    <div>
+                        <label for="fecha">Fecha del avistamiento *</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                        <span class="error" id="error-fecha"></span>
+                    </div>
+                    <div>
+                        <label for="hora">Hora del avistamiento *</label>
+                        <input type="time" id="hora" name="hora" required>
+                        <span class="error" id="error-hora"></span>
+                    </div>
+                </fieldset>
+            </section>
+
+            <section>
+                <h3>Respaldo del avistamiento</h3>
+                <fieldset>
+                    <legend>Evidencia</legend>
+                    <div>
+                        <label for="evidencia">Fotos o videos *</label>
+                        <input type="file" id="evidencia" name="evidencia" multiple
+                               accept="image/jpeg,image/png,image/webp,video/mp4,video/webm"
+                               required>
+                        <span class="error" id="error-evidencia"></span>
+                    </div>
+                    <div>
+                        <label for="obs">Observaciones (opcional)</label>
+                        <textarea id="obs" name="obs" rows="4" cols="40" maxlength="500"
+                                  placeholder="Describa el entorno, el clima u otro detalle relevante..."></textarea>
+                    </div>
+                </fieldset>
+            </section>
+
+            <button type="submit">Enviar avistamiento</button>
+            <button type="reset">Limpiar formulario</button>
+        </form>
+    </main>
+
+    <footer>
+        <p><b>Av(e)stamientos de Chile</b> - Todos los derechos reservados Pablo Pizarro Salazar</p>
+        <p>CC5002 Desarrollo de Aplicaciones Web - Facultad de Ciencias Físicas y Matemáticas, Universidad de Chile</p>
+        <p>Contacto (ficticio): pablotologo@ornitologos.cl</p>
+    </footer>
+
+    <script src="js/regiones.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/avistamiento.js"></script>
+
+</body>
+
+</html>

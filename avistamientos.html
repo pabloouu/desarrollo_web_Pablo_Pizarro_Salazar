@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avistamientos registrados | Av(e)stamientos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Av(e)stamientos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro-voluntario.html">Ser voluntario</a></li>
+                <li><a href="nuevo-avistamiento.html">Informar avistamiento</a></li>
+                <li><a href="avistamientos.html">Avistamientos</a></li>
+                <li><a href="estadisticas.html">Indicadores</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form id="form-avistamientos" novalidate>
+            <h2>Avistamientos registrados</h2>
+            <p>Filtre por tipo de ave, región o palabra clave, ordene los resultados y recórralos por páginas.
+            </p>
+
+            <section>
+                <h3>Filtros y búsqueda</h3>
+                <fieldset>
+                    <legend>Búsqueda</legend>
+                    <div>
+                        <label for="tipo-ave">Tipo de ave</label>
+                        <select id="tipo-ave" name="tipo-ave">
+                            <option value="">Todos los tipos</option>
+                            <option value="rapaces">Rapaces</option
+                            <option value="acuaticas">Acuáticas</option>
+                            <option value="marinas">Marinas</option>
+                            <option value="terrestres">Terrestres</option>
+                            <option value="paseriformes">Paseriformes</option>
+                            <option value="picaflores">Picaflores</option>
+                        </select>
+                        <span class="error" id="error-tipo-ave"></span>
+                    </div>
+                    <div>
+                        <label for="region">Región</label>
+                        <select id="region" name="region">
+                            <option value="">Todas las regiones</option>
+                            <option value="Arica y Parinacota">Arica y Parinacota</option>
+                            <option value="Tarapacá">Tarapacá</option>
+                            <option value="Antofagasta">Antofagasta</option>
+                            <option value="Atacama">Atacama</option>
+                            <option value="Coquimbo">Coquimbo</option>
+                            <option value="Valparaíso">Valparaíso</option>
+                            <option value="Metropolitana de Santiago">Metropolitana de Santiago</option>
+                            <option value="Libertador General Bernardo O'Higgins">O'Higgins</option>
+                            <option value="Maule">Maule</option>
+                            <option value="Ñuble">Ñuble</option>
+                            <option value="Biobío">Biobío</option>
+                            <option value="La Araucanía">La Araucanía</option>
+                            <option value="Los Ríos">Los Ríos</option>
+                            <option value="Los Lagos">Los Lagos</option>
+                            <option value="Aysén del General Carlos Ibáñez del Campo">Aysén</option>
+                            <option value="Magallanes y de la Antártica Chilena">Magallanes</option>
+                        </select>
+                        <span class="error" id="error-region"></span>
+                    </div>
+                    <div>
+                        <label for="palabra-clave">Nombre del ave o lugar</label>
+                        <input type="text" id="palabra-clave" name="palabra-clave">
+                        <span class="error" id="error-palabra-clave"></span>
+                    </div>
+                    <div>
+                        <label for="avistamiento-desde">Avistamiento desde</label>
+                        <input type="date" id="avistamiento-desde" name="avistamiento-desde">
+                        <span class="error" id="error-avistamiento-desde"></span>
+                    </div>
+                    <div>
+                        <label for="avistamiento-hasta">Avistamiento hasta</label>
+                        <input type="date" id="avistamiento-hasta" name="avistamiento-hasta">
+                        <span class="error" id="error-avistamiento-hasta"></span>
+                    </div>
+                    <div>
+                        <label for="ordenar-por">Ordenar por</label>
+                        <select id="ordenar-por" name="ordenar-por">
+                            <option value="fecha-avistamiento-reciente">Fecha del avistamiento (más reciente primero)</option>
+                            <option value="fecha-avistamiento-antigua">Fecha del avistamiento (más antigua primero)</option>
+                            <option value="lugar-a">Lugar (A -> Z)</option>
+                            <option value="lugar-z">Lugar (Z -> A)</option>
+                            <option value="nombre-ave-a">Nombre del ave (A -> Z)</option>
+                            <option value="nombre-ave-z">Nombre del ave (Z -> A)</option>
+                            <option value="cantidad-ejem-mayores">Cantidad de ejemplares (mayores primero)</option>
+                            <option value="cantidad-ejem-menores">Cantidad de ejemplares (menores primero)</option>
+                        </select>
+                        <span class="error" id="error-ordenar-por"></span>
+                    </div>
+                </fieldset>
+        
+            </section>
