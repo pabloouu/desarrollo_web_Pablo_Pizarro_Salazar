@@ -13,3 +13,7 @@ Los required son solo refuerzo semantico visual para ir guiandome qué campos so
 nuevo-avistamiento se rige bajo las mismas normas.
 
 Para prototipar los avistamientos le pedi a la IA que me generara una lista con avistamientos ficticios
+
+Agrego un small class a cada uno de los campos de los formularios como ayuda visual e informativa al cliente/usuario.
+
+Pasamos a los estilo css de momento, en donde escribiré primeros los selectores que quiero que se vean afectados.

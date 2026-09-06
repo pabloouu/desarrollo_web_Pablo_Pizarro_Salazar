@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
 </head>
 
 <body>
-    
+
     <header>
         <h1>Av(e)stamientos</h1>
         <nav>
@@ -20,8 +21,8 @@
                 <li><a href="estadisticas.html">Indicadores</a></li>
             </ul>
         </nav>
-    </header> 
-    
+    </header>
+
     <main>
         <form id="form-registro" novalidate>
             <h2>Inscripción de voluntarios y voluntarias</h2>
@@ -29,29 +30,33 @@
                 marcados con * son <strong>obligatorios</strong> para poder inscribirse. ¡Únete a esta
                 gran comunidad y estate al tanto de los avistamientos, salidas a terreno y más!
             </p>
-            
+
             <section>
                 <h3>Datos personales</h3>
                 <fieldset>
                     <legend>Identificación</legend>
                     <div>
-                        <label for="nombres">Nombres *</label> 
+                        <label for="nombres">Nombres *</label>
                         <input type="text" id="nombres" name="nombres" required>
+                        <small class="ayuda">Entre 3 y 60 letras.</small>
                         <span class="error" id="error-nombres"></span>
                     </div>
                     <div>
                         <label for="apellidos">Apellidos *</label>
                         <input type="text" id="apellidos" name="apellidos" required>
+                        <small class="ayuda">Entre 3 y 60 letras.</small>
                         <span class="error" id="error-apellidos"></span>
                     </div>
                     <div>
                         <label for="rut">RUT *</label>
                         <input type="text" id="rut" name="rut" required>
+                        <small class="ayuda">Con dígito verificador. Ejempo:12.345.678-9</small>
                         <span class="error" id="error-rut"></span>
                     </div>
                     <div>
                         <label for="fecha-nacimiento">Fecha de nacimiento *</label>
                         <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                        <small class="ayuda">Debe tener 14 años cumplidos o más</small>
                         <span class="error" id="error-fecha-nacimiento"></span>
                     </div>
                 </fieldset>
@@ -72,23 +77,27 @@
                 <fieldset>
                     <legend>Contacto</legend>
                     <div>
-                        <label for="correo">Correo electrónico *</label> 
+                        <label for="correo">Correo electrónico *</label>
                         <input type="email" id="correo" name="correo" required>
+                        <small class="ayuda">Será su identificador al informar avistamientos.</small>
                         <span class="error" id="error-correo"></span>
                     </div>
                     <div>
                         <label for="correo-rep">Correo electrónico (repetición) *</label>
                         <input type="text" id="correo-rep" name="correo-rep" required>
+                        <small class="ayuda">Debe coincidir exactamente con el anterior.</small>
                         <span class="error" id="error-correo-rep"></span>
                     </div>
                     <div>
                         <label for="telefono">Teléfono celular *</label>
                         <input type="tel" id="telefono" name="telefono" required>
+                        <small class="ayuda">Nueve dígitos comenzando en 9. Ejemplo: 945623815</small>
                         <span class="error" id="error-telefono"></span>
                     </div>
                     <div>
                         <label for="telefono-fijo">Teléfono fijo (opcional)</label>
                         <input type="tel" id="telefono-fijo" name="telefono-fijo">
+                        <small class="ayuda">Entre 8 y 12 dígitos, con o sin código de área.</small>
                         <span class="error" id="error-telefono-fijo"></span>
                     </div>
                 </fieldset>
@@ -119,6 +128,7 @@
                             <option value="Aysén del General Carlos Ibáñez del Campo">Aysén</option>
                             <option value="Magallanes y de la Antártica Chilena">Magallanes</option>
                         </select>
+                        <small class="ayuda">Al elegir la región se cargan las comunas</small>
                         <span class="error" id="error-region"></span>
                     </div>
                     <div>
@@ -156,7 +166,7 @@
                         <label for="experiencia-A">Avanzado: identifico especies poco frecuentes</label>
                         <span class="error" id="error-experiencia"></span>
                     </fieldset>
-                    
+
                     <fieldset>
                         <legend>Intereses*</legend>
                         <label for="interes-rapaces">
@@ -195,24 +205,25 @@
                     <div>
                         <label for="obs">Observaciones (opcional)</label>
                         <textarea id="obs" name="obs" rows="4" cols="40" maxlength="500"
-                        placeholder="Indica información adicional que quieras compartir..."></textarea>
+                            placeholder="Indica información adicional que quieras compartir..."></textarea>
                     </div>
 
                     <div>
                         <label for="consentimiento">
-                        <input type="checkbox" id="consentimiento" name="consentimiento" required> 
-                        Declaro que los datos entregados son válidos y autorizo su uso para fines de investigación ornitológica e intereses del usuario *.    
+                            <input type="checkbox" id="consentimiento" name="consentimiento" required>
+                            Declaro que los datos entregados son válidos y autorizo su uso para fines de investigación
+                            ornitológica e intereses del usuario *.
                         </label>
                         <span class="error" id="error-consentimiento"></span>
                     </div>
                 </fieldset>
             </section>
-            
+
             <button type="submit">Registrarme</button>
             <button type="reset">Limpiar formulario</button>
         </form>
     </main>
-        
+
     <footer>
         <p><b>Av(e)stamientos de Chile</b> - Todos los derechos reservados Pablo Pizarro Salazar</p>
         <p>CC5002 Desarrollo de Aplicaciones Web - Facultad de Ciencias Físicas y Matemáticas, Universidad de Chile</p>
