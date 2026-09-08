@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicadores y métricas | Av(e)stamientos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Av(e)stamientos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro-voluntario.html">Ser voluntario</a></li>
+                <li><a href="nuevo-avistamiento.html">Informar avistamiento</a></li>
+                <li><a href="avistamientos.html">Avistamientos</a></li>
+                <li><a href="estadisticas.html">Indicadores</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Indicadores y métricas</h2>
+        <p>A continuación se muestran gráficos con los datos de Av(e)stamientos, junto a los mismos datos en tablas.
+            De acá puedes sacar conclusiones y compartirlas con nosotros!
+        </p>
+
+        <section>
+
+            <h3>Cifras generales</h3>
+            <ul id="cifras" class="cifras"></ul>
+
+        </section>
+
+        <section>
+            <h3>Gráficos</h3>
+
+            <div class="tarjetas-graficos">
+
+                <article class="tarjeta-grafico">
+                    <h4>Avistamientos por tipo de ave</h4>
+
+                    <p class="ayuda">Cantidad de informes recibidos para cada grupo del catálogo
+                        de aves.</p>
+
+                    <svg id="grafico-tipos" viewBox="0 0 400 240" role="img"
+                         aria-label="Gráfico de barras con la cantidad de avistamientos por tipo de ave">
+                    </svg>
+
+                    <details>
+                        <summary>Ver los datos en una tabla</summary>
+                        <table>
+                            <caption>Avistamientos por tipo de ave</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Tipo</th>
+                                    <th scope="col">Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-tipos"></tbody>
+                        </table>
+                    </details>
+                </article>
+
+                <article class="tarjeta-grafico">
+                    <h4>Avistamientos por mes</h4>
+                    <p class="ayuda">Informes recibidos en los últimos cuatro meses, para detectar
+                        variaciones estacionales.</p>
+
+                    <svg id="grafico-meses" viewBox="0 0 400 240" role="img"
+                         aria-label="Gráfico de barras con la cantidad de avistamientos por mes">
+                    </svg>
+
+                    <details>
+                        <summary>Ver los datos en una tabla</summary>
+                        <table>
+                            <caption>Avistamientos por mes</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Mes</th>
+                                    <th scope="col">Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-meses"></tbody>
+                        </table>
+                    </details>
+                </article>
+
+                <article class="tarjeta-grafico">
+                    <h4>Regiones con más avistamientos</h4>
+                    <p class="ayuda">Las seis regiones que concentran la mayor cantidad de
+                        informes.</p>
+
+                    <svg id="grafico-regiones" viewBox="0 0 400 200" role="img"
+                         aria-label="Gráfico de barras horizontales con las regiones que tienen más avistamientos">
+                    </svg>
+
+                    <details>
+                        <summary>Ver los datos en una tabla</summary>
+                        <table>
+                            <caption>Avistamientos por región</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Región</th>
+                                    <th scope="col">Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-regiones"></tbody>
+                        </table>
+                    </details>
+                </article>
+
+                <article class="tarjeta-grafico">
+                    <h4>Voluntarios por nivel de experiencia</h4>
+                    <p class="ayuda">Composición de la red de voluntarios según el nivel que
+                        declararon al inscribirse.</p>
+
+                    <svg id="grafico-niveles" viewBox="0 0 400 160" role="img"
+                         aria-label="Gráfico de barras horizontales con la cantidad de voluntarios por nivel de experiencia">
+                    </svg>
+
+                    <details>
+                        <summary>Ver los datos en una tabla</summary>
+                        <table>
+                            <caption>Voluntarios por nivel</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nivel</th>
+                                    <th scope="col">Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-niveles"></tbody>
+                        </table>
+                    </details>
+                </article>
+
+            </div>
+        </section>
+
+        <section>
+            <h3>Voluntarios más activos</h3>
+            <p class="ayuda">Personas voluntarias ordenadas por cantidad de avistamientos
+                informados.</p>
+            <table>
+                <caption>Ranking de voluntarios</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Lugar</th>
+                        <th scope="col">Voluntario</th>
+                        <th scope="col">Región</th>
+                        <th scope="col">Nivel</th>
+                        <th scope="col">Avistamientos</th>
+                        <th scope="col">Ejemplares informados</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo-ranking"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p><b>Av(e)stamientos de Chile</b> - Todos los derechos reservados Pablo Pizarro Salazar</p>
+        <p>CC5002 Desarrollo de Aplicaciones Web - Facultad de Ciencias Físicas y Matemáticas, Universidad de Chile</p>
+        <p>Contacto (ficticio): pablotologo@ornitologos.cl</p>
+    </footer>
+
+    <script src="js/datos.js"></script>
+    <script src="js/estadisticas.js"></script>
+
+</body>
+
+</html>

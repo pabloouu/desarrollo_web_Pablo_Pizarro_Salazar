@@ -159,6 +159,7 @@
                             accept="image/jpeg,image/png,image/webp,video/mp4,video/webm" required>
                         <small class="ayuda">Obligatorio al menos un archivo. Se aceptan hasta 5 archivos de tipo JPG, PNG, WEBP, MP4, WEBM, con un máximo de 25 MB cada uno.</small>
                         <span class="error" id="error-evidencia"></span>
+                        <ul id="lista-archivos"></ul>
                     </div>
                     <div>
                         <label for="obs">Observaciones (opcional)</label>
@@ -169,6 +170,8 @@
                 </fieldset>
             </section>
 
+            <p id="mensaje-final"></p>
+            
             <button type="submit">Enviar avistamiento</button>
             <button type="reset">Limpiar formulario</button>
         </form>
